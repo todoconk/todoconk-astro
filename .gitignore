@@ -31,3 +31,8 @@ public/pagefind
 
 # docker compose
 compose.override.yaml
+
+# local debugging backups and planning scratch
+*.original.ts
+*.original.css
+/docs/

@@ -28,9 +28,10 @@ export default defineConfig({
         config.features?.showArchives !== false || !page.endsWith("/archives/"),
     }),
   ],
+  // CAMBIO: locale de en -> es, para que coincida con site.lang en astro-paper.config.ts
   i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
+    locales: ["es"],
+    defaultLocale: "es",
     routing: {
       prefixDefaultLocale: false,
     },
@@ -58,15 +59,34 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  // CAMBIO: se reemplazó "Google Sans Code" por las 3 tipografías
+  // del sistema de diseño aprobado (Space Grotesk / IBM Plex Sans / IBM Plex Mono).
+  // Los nombres de cssVariable coinciden con los usados en src/styles/theme.css.
   fonts: [
     {
-      name: "Google Sans Code",
-      cssVariable: "--font-google-sans-code",
+      name: "Space Grotesk",
+      cssVariable: "--font-heading",
       provider: fontProviders.google(),
-      fallbacks: ["monospace"],
-      weights: [300, 400, 500, 600, 700],
+      weights: [500, 600, 700],
+      styles: ["normal"],
+      fallbacks: ["system-ui", "sans-serif"],
+    },
+    {
+      name: "IBM Plex Sans",
+      cssVariable: "--font-body",
+      provider: fontProviders.google(),
+      weights: [400, 500, 600],
       styles: ["normal", "italic"],
-      formats: ["woff", "ttf"],
+      formats: ["woff2", "ttf"],
+      fallbacks: ["-apple-system", "sans-serif"],
+    },
+    {
+      name: "IBM Plex Mono",
+      cssVariable: "--font-mono",
+      provider: fontProviders.google(),
+      weights: [400, 500],
+      styles: ["normal"],
+      fallbacks: ["ui-monospace", "monospace"],
     },
   ],
   env: {

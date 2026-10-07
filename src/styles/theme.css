@@ -7,28 +7,46 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-google-sans-code);
+  --font-app: var(--font-body);
 }
 
 /* Light theme values */
 :root,
 [data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
+  --background: #fafaf9;
+  --foreground: #1b1d1e;
+  --accent: #3452c7;
   --accent-foreground: #ffffff;
-  --muted: #e6e6e6;
+  --muted: #e6eafb;
   --muted-foreground: #6b7280;
-  --border: #ece9e9;
+  --border: #e6e5e1;
 }
 
 /* Dark theme values */
 [data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --accent-foreground: #ffffff;
-  --muted: #343f60;
+  --background: #14171a;
+  --foreground: #e9ebec;
+  --accent: #7c93ff;
+  --accent-foreground: #14171a;
+  --muted: #1b1f24;
   --muted-foreground: #afb9ca;
-  --border: #ab4b08;
+  --border: #2b3035;
+}
+
+:root {
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6, nav, .site-title {
+  font-family: var(--font-heading);
+}
+
+code, pre {
+  font-family: var(--font-mono);
 }

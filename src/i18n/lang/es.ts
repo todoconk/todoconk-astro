@@ -1,0 +1,67 @@
+import type { UIStrings } from "../types";
+
+export default {
+  nav: {
+    home: "Inicio",
+    posts: "Publicaciones",
+    tags: "Etiquetas",
+    about: "Acerca de",
+    archives: "Archivo",
+    search: "Buscar",
+  },
+  post: {
+    publishedAt: "Publicado",
+    updatedAt: "Actualizado",
+    sharePostIntro: "Compartir esta publicación:",
+    sharePostOn: "Compartir esta publicación en {{platform}}",
+    sharePostViaEmail: "Compartir esta publicación por correo",
+    tagLabel: "Etiquetas",
+    backToTop: "Volver arriba",
+    goBack: "Volver",
+    editPage: "Editar página",
+    previousPost: "Publicación anterior",
+    nextPost: "Publicación siguiente",
+  },
+  pagination: {
+    prev: "Anterior",
+    next: "Siguiente",
+    page: "Página",
+  },
+  home: {
+    socialLinks: "Redes sociales",
+    featured: "Destacados",
+    recentPosts: "Publicaciones recientes",
+    allPosts: "Todas las publicaciones",
+  },
+  footer: {
+    copyright: "Derechos de autor",
+    allRightsReserved: "Todos los derechos reservados.",
+  },
+  pages: {
+    tagTitle: "Etiqueta",
+    tagDesc: "Publicaciones con la etiqueta",
+    tagsTitle: "Etiquetas",
+    tagsDesc: "Todas las etiquetas de las publicaciones.",
+    postsTitle: "Publicaciones",
+    postsDesc: "Todas las publicaciones del sitio.",
+    archivesTitle: "Archivo",
+    archivesDesc: "Publicaciones archivadas.",
+    searchTitle: "Buscar",
+    searchDesc: "Buscar publicaciones...",
+  },
+  a11y: {
+    skipToContent: "Saltar al contenido",
+    openMenu: "Abrir menú",
+    closeMenu: "Cerrar menú",
+    toggleTheme: "Cambiar tema",
+    searchPlaceholder: "Buscar publicaciones...",
+    noResults: "No se encontraron resultados",
+    goToPreviousPage: "Ir a la página anterior",
+    goToNextPage: "Ir a la página siguiente",
+  },
+  notFound: {
+    title: "404: Página no encontrada",
+    message: "No se encontró la página",
+    goHome: "Volver al inicio",
+  },
+} satisfies UIStrings;
